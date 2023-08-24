@@ -164,7 +164,7 @@ a{
 
 
   .settings-container {
-    max-width: 600px;
+    width:90%;
     margin: 50px auto;
     background-color: #fff;
     border-radius: 8px;
