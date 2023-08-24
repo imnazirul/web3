@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#4B52DB;
+    width:100%;
+}
+/*header design*/
+
+
+.header{
+    background-color: black;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px;
+}
+
+/*header items design*/
+a{
+    color: white;
+    text-decoration: none;
+}
+.header ul li h3{
+    color: white;
+}
+.menu-bar{
+    width:10%;
+    position: relative;
+    cursor: pointer;
+}
+.fa-bars{
+    color: white;
+    font-size: 30px;
+    padding-left: 5px;
+}
+.fa-hacker-news{
+    color: white;
+    font-size: 30px;
+}
+.header-txt{
+    width:80%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+.user-icon{
+   width:10%;
+   text-align: right;
+   color: white;
+   font-size: 30px;
+}
+
+/* sidebar design*/
+
+.side-bar{
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left:-13px;
+    width: 260px;
+    display: none;
+    border-bottom-right-radius: 30px;
+}
+.side-bar ul li i{
+    margin-right: 10px;
+    text-align: left;
+}
+
+.side-bar ul{
+     width:260px;
+}
+
+.side-bar ul li{
+    border:2px solid gray;
+    margin:20px 20px;
+    padding: 10px;
+    flex-shrink: 1;
+    border-radius: 20px;   
+}
+
+
+.side-bar ul li a{
+       font-size: 18px;
+       letter-spacing: 1px;
+}
+
+
+/*---------all hovers--------*/
+
+.side-bar ul li:hover a{
+    color:black;
+}
+
+.side-bar ul li:hover{
+    background-color: aliceblue;
+    color: black;
+}
+
+.menu-bar:hover .side-bar{
+    display: block;
+}
+
+
+/*--------animation start--------*/
+
+.side-bar{
+    animation: side-ani 0.6s forwards;
+}
+
+@keyframes side-ani {
+    0%{
+        width:0px;
+    }
+
+    100%{
+        width:260px;
+    }
+}
+
+.side-bar ul{ 
+    animation: ul-anime 0.6s forwards;
+}
+@keyframes ul-anime {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 450px;
+    }
+}
+
+.side-bar ul li{
+    animation: li-anime 1.2s ease-in;
+    
+}
+@keyframes li-anime {
+    0%{
+       
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container > div{
+    margin:30px;
+}
+
+.card1{
+    background-color: aquamarine;
+    width:30%;
+    height: 450px;
+    border:2px solid rgb(6, 253, 253);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+.card1 img{
+    width:100%;
+    height: 185px;
+    
+}
+.card1text{
+    text-align: center;
+    background-color: aquamarine;
+    height: 207px;
+    padding: 10px;
+    
+}
+
+.card1-footer{ 
+    background-color: blueviolet;
+    height:50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1-read{
+    width: 33%;
+    text-align: center;
+    border-right: 2px solid white;
+}
+.card1-views{
+    width: 33%;
+    text-align: center;
+    border-right: 2px solid white;
+}
+.card1-comments{
+    width: 34%;
+    text-align: center;
+}
+.card1-footer > div{
+    padding-top:5px;
+}
+
+/*-------card one style end---------*/
+
+.card1:hover{
+       transform: scale(1.06);
+       cursor: pointer;
+}
+
+.card1 a:visited{
+    text-decoration: none;
+    color:none;
+}
+
+
+
+@media screen and (max-width:600px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card1-footer{ 
+        display:visible;
+    }
+    .card1{
+        background-color: aquamarine;
+        width:85%;
+    }
+
+}

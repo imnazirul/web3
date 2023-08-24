@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,400;1,500;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#4B52DB;
+    width:100%;
+    height: 100vh;
+}
+/*header design*/
+
+
+.header{
+    background-color: black;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px;
+}
+
+/*header items design*/
+a{
+    color: white;
+    text-decoration: none;
+}
+.header ul li h3{
+    color: white;
+}
+.menu-bar{
+    width:10%;
+    position: relative;
+    cursor: pointer;
+}
+.fa-bars{
+    color: white;
+    font-size: 30px;
+    padding-left: 5px;
+}
+.fa-hacker-news{
+    color: white;
+    font-size: 30px;
+}
+.header-txt{
+    width:80%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+.user-icon{
+   width:10%;
+   text-align: right;
+   color: white;
+   font-size: 30px;
+}
+
+/* sidebar design*/
+
+.side-bar{
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left:-13px;
+    width: 260px;
+    display: none;
+    border-bottom-right-radius: 30px;
+}
+.side-bar ul li i{
+    margin-right: 10px;
+    text-align: left;
+}
+
+.side-bar ul{
+     width:260px;
+}
+
+.side-bar ul li{
+    border:2px solid gray;
+    margin:20px 20px;
+    padding: 10px;
+    flex-shrink: 1;
+    border-radius: 20px;   
+}
+
+
+.side-bar ul li a{
+       font-size: 18px;
+       letter-spacing: 1px;
+}
+
+
+/*---------all hovers--------*/
+
+.side-bar ul li:hover a{
+    color:black;
+}
+
+.side-bar ul li:hover{
+    background-color: aliceblue;
+    color: black;
+}
+
+.menu-bar:hover .side-bar{
+    display: block;
+}
+
+
+/*--------animation start--------*/
+
+.side-bar{
+    animation: side-ani 0.6s forwards;
+}
+
+@keyframes side-ani {
+    0%{
+        width:0px;
+    }
+
+    100%{
+        width:260px;
+    }
+}
+
+.side-bar ul{ 
+    animation: ul-anime 0.6s forwards;
+}
+@keyframes ul-anime {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 450px;
+    }
+}
+
+.side-bar ul li{
+    animation: li-anime 1.2s ease-in;
+    
+}
+@keyframes li-anime {
+    0%{
+       
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.mores{
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+
+  .settings-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  .settings-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  label {
+    font-weight: bold;
+  }
+  select, input[type="checkbox"] {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
