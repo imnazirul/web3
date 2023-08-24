@@ -63,7 +63,7 @@ a{
 .side-bar{
     background-color: black;
     position: absolute;
-    top:0;
+    top:24px;
     left:-13px;
     width: 260px;
     display: none;
