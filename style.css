@@ -21,6 +21,7 @@ body{
     flex-direction: row;
     align-items: center;
     padding: 12px;
+    position: fixed;
 }
 
 /*header items design*/
