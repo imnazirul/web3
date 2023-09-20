@@ -6,6 +6,24 @@
     <title>SpaceX</title>
     <script src="https://kit.fontawesome.com/9b87c9a7f7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+
+        .timediv{
+            margin:0 auto;
+        }
+        .timebtn{
+            display:block;
+            width:100px;
+            height:70px;
+            font-size:30px;
+            padding:10px;
+            margin:20px;
+            background:green;
+            font-family: "Times New Roman", Times, serif;
+            text-align:center;
+            
+        }
+    </style>
 </head>
 <body>
 
@@ -62,8 +80,8 @@
             <div class="js-ani"></div>
         </div>
     </div>
-    <div>
-        <button onclick="this.innerHTML= Date()">See Time</button>
+    <div class="timediv">
+        <button class="timebtn" onclick="this.innerHTML= Date()">See Time</button>
     </div>
 
 
