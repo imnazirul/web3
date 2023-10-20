@@ -51,6 +51,7 @@
         <div class="user-icon"><a href="#"><i class="fa-solid fa-circle-user"></i> </a> </div>
 
     </div>
+<p id="demo"></p>
 
     <div class="gif-container">
 
@@ -83,6 +84,16 @@
     <div class="timediv">
         <button class="timebtn" onclick="this.innerHTML= Date()">See Time</button>
     </div>
+
+<script>
+
+function myfun(){
+document.getElementById('demo').innerHTML = new Date();
+}
+
+setInterval(myfun, 1000)
+
+</script>
 
 
     
