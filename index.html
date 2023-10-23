@@ -29,6 +29,41 @@
   color: white;
   font-size: 18px;
 }
+
+
+.showabout{
+    width:100%;
+    border:1px solid aliceblue;
+
+}
+
+.showabout h1{
+    margin:20px 20px;
+    padding: 10px;
+    font-size: 40px;
+    color: #000;
+    color: #ddd;
+    text-shadow: 1px 1px 2px black;
+}
+
+.showabout h3{
+    background-color: cadetblue;
+    margin: 20px 30px;
+    padding: 5px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.showabout p{
+    font-size: 18px;
+    text-align: justify;
+    margin:20px 30px;
+    color:#fff
+}
+
+
+
+
     </style>
 </head>
 <body>
@@ -40,7 +75,7 @@
 
                 <ul>
                     <li><a href="index.html"><i <i class="fa-solid fa-house-user"></i>Home</a></li>
-                    <li onclick="showabout()"><a><i class="fa-regular fa-address-card"></i>About</a></li>
+                    <li onclick="setTimeOut(showabout, 1000)"><a><i class="fa-regular fa-address-card"></i>About</a></li>
                     <li><a href="menu files/contact.html"> <i class="fa-regular fa-address-book"></i>Contact</a></li>
                     <li><a href="menu files/service.html"><i class="fa-brands fa-servicestack"></i>Services</a></li>
                     <li><a href="menu files/terms.html"><i class="fa-regular fa-circle-question"></i>Terms&Conditions</a></li>
