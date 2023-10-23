@@ -92,11 +92,29 @@
 
 <script>
 
-function myfun(){
-document.getElementById('demo').innerHTML = new Date();
+
+function getTimeIn12HourFormat() {
+  const now = new Date();
+  let hours = now.getHours();
+  const minutes = now.getMinutes();
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+
+  // Convert hours to 12-hour format
+  if (hours > 12) {
+    hours -= 12;
+  } else if (hours === 0) {
+    hours = 12;
+  }
+
+  // Add leading zero to minutes if needed
+  const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+
+  const time12HourFormat = `<h1> ${hours}:${formattedMinutes}:${now.getSeconds()} ${ampm}</h1>`;
+  document.getElementById('demo').innerHTML = time12HourFormat ;
 }
 
-setInterval(myfun, 1000);
+setInterval(getTimeIn12HourFormat, 0)
+
 
 
 
