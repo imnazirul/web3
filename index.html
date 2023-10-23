@@ -179,7 +179,7 @@ function getTimeIn12HourFormat() {
   // Add leading zero to minutes if needed
   const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
 
-  const time12HourFormat = `<h1> ${hours}:${formattedMinutes}:${now.getSeconds()} ${ampm}<br> ${text}  ${now.getDate()} ${text1}  ${now.getFullYear()}</h1>`;
+  const time12HourFormat = `<h1> ${hours}:${formattedMinutes}:${now.getSeconds()} ${ampm} </h1> <h3>${text} ${now.getDate()} ${text1}  ${now.getFullYear()} </h3>`;
   document.getElementById('demo').innerHTML = time12HourFormat ;
 }
 
