@@ -202,43 +202,17 @@ switch(day) {
 
 function getTimeIn12HourFormat() {
   const now = new Date();
-  let hours = now.getHours();
-  const minutes = now.getMinutes();
-  const ampm = hours >= 12 ? 'PM' : 'AM';
+  
 
-  // Convert hours to 12-hour format
-  if (hours > 12) {
-    hours -= 12;
-  } else if (hours === 0) {
-    hours = 12;
-  }
+  const localTime = new Date().toLocaleTimeString();
 
-  // Add leading zero to minutes if needed
-  const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
-
-  const time12HourFormat = `<h1> ${hours}:${formattedMinutes}:${now.getSeconds()} ${ampm} </h1> <h3>${text} ${now.getDate()} ${text1}  ${now.getFullYear()} </h3>`;
+  const time12HourFormat = `<h1>$(localTime)</h1> <h3>${text} ${now.getDate()} ${text1}  ${now.getFullYear()} </h3>`;
+    
   document.getElementById('demo').innerHTML = time12HourFormat ;
 }
 
 setInterval(getTimeIn12HourFormat, 0)
-function showabout() {
-    document.getElementById('showabout').innerHTML = `<h1>About</h1>
-        <p>Last Update: 20 Auguest 2023</p>
-        <hr class="hr-line">
-        
-        <h3>Elon Musk: Revolutionizing Space Exploration and Electric Vehicles</h3>
 
-        <p>Elon Musk, a visionary entrepreneur and innovator, has left an indelible mark on both the space exploration and electric vehicle industries through his companies SpaceX and Tesla. With an unparalleled ability to think beyond the boundaries of traditional industries, Musk has redefined what is possible, transforming science fiction into reality.</p>
-            
-            <p>SpaceX, founded by Musk in 2002, has disrupted the space industry by introducing cost-effective and reusable rocket technology. The company's Falcon 9 rockets and Falcon Heavy launch vehicles have not only drastically reduced the cost of sending payloads into space but have also paved the way for the ambitious goal of colonizing Mars. SpaceX achieved historic milestones such as the first privately-funded spacecraft to reach orbit, the first privately-funded spacecraft to dock with the International Space Station (ISS), and the successful landing and reuse of rocket stages. The Starship project, currently in development, aims to create a fully reusable spacecraft capable of interplanetary travel, potentially revolutionizing humanity's presence in the cosmos.</p>
-            
-            <p>In the realm of sustainable transportation, Elon Musk's Tesla has been at the forefront of the electric vehicle (EV) revolution. Established in 2003, Tesla's mission is to accelerate the world's transition to sustainable energy. The company's sleek and high-performance electric cars, including the Model S, Model 3, Model X, and Model Y, have reshaped the perception of electric vehicles from being mere eco-friendly alternatives to offering cutting-edge technology, impressive acceleration, and a wide network of charging infrastructure. Tesla's innovation extends to battery technology with the Gigafactories, enormous production facilities dedicated to manufacturing batteries at scale, aimed at reducing costs and increasing the availability of clean energy solutions.</p>
-            
-            <p>Beyond SpaceX and Tesla, Elon Musk's ventures also include Neuralink, a company focused on developing brain-computer interface technology, and The Boring Company, which aims to revolutionize tunneling and urban transportation systems. Musk's penchant for tackling audacious challenges has earned him both admiration and criticism, as his ambitious goals often come with technical and logistical hurdles.</p>
-            
-            <p>Elon Musk's impact on space exploration and the automotive industry cannot be overstated. His commitment to advancing technology, reducing humanity's dependence on fossil fuels, and expanding humanity's reach beyond Earth has inspired a new generation of engineers, scientists, and entrepreneurs to dream bigger and work towards a more sustainable and interconnected future.</p>`
-
-}
 
 
 </script>
