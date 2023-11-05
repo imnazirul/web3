@@ -206,7 +206,7 @@ function getTimeIn12HourFormat() {
 
   const localTime = new Date().toLocaleTimeString();
 
-  const time12HourFormat = `<h1>$(localTime)</h1> <h3>${text} ${now.getDate()} ${text1}  ${now.getFullYear()} </h3>`;
+  const time12HourFormat = `<h1>${localTime}</h1> <h3>${text} ${now.getDate()} ${text1}  ${now.getFullYear()} </h3>`;
     
   document.getElementById('demo').innerHTML = time12HourFormat ;
 }
