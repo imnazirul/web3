@@ -97,6 +97,10 @@
 
 <p id="demo"></p>
 
+<p id="demo2"></p>
+
+<button onclick="watchPosition()">Watch Position>
+
     <div class="gif-container">
 
         <h1>Under Construction</h1>
@@ -214,7 +218,14 @@ function getTimeIn12HourFormat() {
 setInterval(getTimeIn12HourFormat, 0)
 
 
+function watchPosition() {
+  if(navigator.geolocation){
+      navigator.geolocation.watchPosition(showPosition, showError)
 
+  }else{
+      alert("Location is not available in your browser")
+   }
+}
 </script>
 
 
