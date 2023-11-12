@@ -226,6 +226,21 @@ function watchPosition() {
       alert("Location is not available in your browser")
    }
 }
+
+const demo2 = document.getElementById('demo2');
+
+function showPosition(position){
+
+    demo2.innerHTML ="Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+
+}
+
+function showError(error){
+  demo2.innerHTML = error.message
+}
+
+
+
 </script>
 
 
