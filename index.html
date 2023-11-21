@@ -75,7 +75,7 @@
 
                 <ul>
                     <li><a href="index.html"><i <i class="fa-solid fa-house-user"></i>Home</a></li>
-                    <li onclick="setTimeout(showabout, 1000)"><a><i class="fa-regular fa-address-card"></i>About</a></li>
+                    <li <a href="menu files/about.html"><i class="fa-regular fa-address-card"></i>About</a></li>
                     <li><a href="menu files/contact.html"> <i class="fa-regular fa-address-book"></i>Contact</a></li>
                     <li><a href="menu files/service.html"><i class="fa-brands fa-servicestack"></i>Services</a></li>
                     <li><a href="menu files/terms.html"><i class="fa-regular fa-circle-question"></i>Terms&Conditions</a></li>
@@ -93,14 +93,8 @@
 
     </div>
 
-    <div id="showabout">
-
 <p id="demo"></p>
-
-<p id="demo2"></p>
-
-<button onclick="watchPosition()">Watch Position</button>
-
+    
     <div class="gif-container">
 
         <h1>Under Construction</h1>
@@ -216,28 +210,6 @@ function getTimeIn12HourFormat() {
 }
 
 setInterval(getTimeIn12HourFormat, 0)
-
-
-function watchPosition() {
-  if(navigator.geolocation){
-      navigator.geolocation.watchPosition(showPosition, showError)
-
-  }else{
-      alert("Location is not available in your browser")
-   }
-}
-
-const demo2 = document.getElementById('demo2');
-
-function showPosition(position){
-
-    demo2.innerHTML ="Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-
-}
-
-function showError(error){
-  demo2.innerHTML = error.message
-}
 
 
 
