@@ -1,6 +1,6 @@
-# BookRater Website
+# Book Loop
 
-**Live Site URL:** [www.bookrater.com](www.bookrater.com)
+**Live Site URL:** [www.bookloop.com](https://nazirul-assignment8.netlify.app)
 
 ## Features and Characteristics:
 
